@@ -455,10 +455,11 @@ progress::-webkit-progress-value {
 
 
 
-/*_________________________Награды_________________________*/
+/*_________________________Достижения_________________________*/
 .awards {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: 3em 3em;
     padding-top: var(--default_margin_or_padding);
     padding-bottom: var(--default_margin_or_padding);
