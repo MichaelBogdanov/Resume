@@ -509,6 +509,7 @@ progress::-webkit-progress-value {
 
 .photo {
     position: relative;
+    user-select: none;
 }
 
 .photo_caption {
