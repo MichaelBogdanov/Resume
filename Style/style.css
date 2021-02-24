@@ -67,7 +67,7 @@ main {
 .about_title {
     text-transform: uppercase;
     color: var(--title-text);
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .about_subtitle {
@@ -88,10 +88,18 @@ main {
 }
 
 .text_link {
+    color: var(--title-text);
+    font-weight: 600;
     text-decoration: none;
-    color:var(--prime-text);
-    font-weight: 500;
+    -moz-transition: color 0.2s ease;
+    -o-transition: color 0.2s ease;
+    -webkit-transition: color 0.2s ease;
 }
+
+.text_link:hover {
+    color: var(--prime-text);
+}
+
 
 
 /*_________________________Стартовый экран_________________________*/
@@ -230,7 +238,6 @@ main {
 
 .info_a:hover {
     color: var(--prime-text);
-    text-decoration: none;
 }
 
 
