@@ -87,6 +87,11 @@ main {
     max-width: 1000px;
 }
 
+.text_link {
+    text-decoration: none;
+    color:var(--prime-text);
+    font-weight: 500;
+}
 
 
 /*_________________________Стартовый экран_________________________*/
@@ -291,7 +296,6 @@ main {
     font-weight: 400;
     line-height: 1.5;
 }
-
 
 
 /*_________________________Навыки_________________________*/
