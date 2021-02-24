@@ -205,8 +205,8 @@ main {
 }
 
 .info {
-    display: grid;
-    grid-template-columns: 33.33% 33.33% 33.33%;
+    display: flex;
+    justify-content: space-between;
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -590,11 +590,12 @@ progress::-webkit-progress-value {
 /*_________________________Контакты_________________________*/
 .footer {
     height: 50vh;
+    padding-bottom: var(--default_margin_or_padding);
 }
 
 .footer_info {
-    display: grid;
-    grid-template-columns: 33.33% 33.33% 33.33%;
+    display: flex;
+    justify-content: space-between;
     width: 100%;
     margin-top: var(--default_margin_or_padding);
     margin-bottom: var(--default_margin_or_padding);
