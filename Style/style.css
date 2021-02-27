@@ -24,12 +24,12 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    -webkit-font-smoothing : none;
 }
 
 body {
     color: var(--main-text);
     background-color: var(--main-bg);
+    font-family: 'Montserrat', sans-serif;
 }
 
 p {
@@ -40,10 +40,19 @@ br {
     user-select:none;
 }
 
-.main_block {
-    display: grid;
-    grid-template-columns: 36.5% 63.5%;
-    height: 100vh;
+h1 {
+    color: var(--title-text);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: var(--title-size);
+}
+
+h2 {
+    color: var(--main-text);
+    font-weight: 400;
+    text-transform: none;
+    font-size: var(--subtitle-size);
+    margin-top: -0.5em;
 }
 
 .block {
@@ -51,28 +60,22 @@ br {
     grid-template-columns: 36.5% 63.5%;
 }
 
-.about {
+.sidebar {
     text-align: right;
-    font-family: 'Montserrat', sans-serif;
-    font-size: var(--title-size);
     padding: var(--default_margin_or_padding);
+    height: 100%;
 }
 
-main {
+.prime {
     position: relative;
     width: 65%;
+    max-width: 1000px;
     margin-left: var(--default_margin_or_padding);
 }
 
-.about_title {
-    text-transform: uppercase;
-    color: var(--title-text);
-    font-weight: 700;
-}
-
-.about_subtitle {
-    margin-top: -0.5em;
-    font-size: var(--subtitle-size);
+.padding_top_and_bottom {
+    padding-top: var(--default_margin_or_padding);
+    padding-bottom: var(--default_margin_or_padding);
 }
 
 .first_color {
@@ -81,10 +84,6 @@ main {
 
 .second_color {
     background-color: var(--second-bg);
-}
-
-.max_width {
-    max-width: 1000px;
 }
 
 .text_link {
@@ -103,10 +102,6 @@ main {
 
 
 /*_________________________Стартовый экран_________________________*/
-.sidebar {
-    height: 100%;
-}
-
 .photo {
     display: flex;
     align-items: center;
@@ -117,17 +112,16 @@ main {
     width: 230px;
     height: 230px;
     margin-left: auto;
-    margin-right: var(--default_margin_or_padding);
     border-radius: 50%;
 }
 
-.content {
+.welcome {
     display: flex;
     align-items: center;
     height: 90vh;
 }
 
-.content_inner {
+.welcome_inner {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -135,7 +129,6 @@ main {
 
 .name {
     color: var(--title-text);
-    font-family: 'Montserrat', sans-serif;
     font-size: var(--main-title-name-size);
     font-weight: 300;
     text-transform: lowercase;
@@ -143,21 +136,15 @@ main {
 
 .surname {
     color: var(--prime-text);
-    font-family: 'Montserrat', sans-serif;
     font-size: var(--main-title-surname-size);
     font-weight: 600;
     margin-top: -0.25em;
     text-transform: uppercase;
 }
 
-.subtitle {
-    margin-top: 0;
-}
-
 .profession {
     margin-top: 0.75em;
     margin-left: 0.1em;
-    font-family: 'Montserrat', sans-serif;
     font-size: var(--main-subtitle-size);
     font-weight: 200;
 }
@@ -189,6 +176,9 @@ main {
 }
 
 .contacts a i {
+    font-size: 25px;
+    margin-top: 5px;
+    color: var(--main-text);
     -moz-transition: color 0.2s ease;
     -o-transition: color 0.2s ease;
     -webkit-transition: color 0.2s ease;
@@ -198,34 +188,17 @@ main {
     color: var(--prime-text);
 }
 
-.contacts a i {
-    margin-top: 5px;
-    color: var(--main-text);
-    font-size: 25px;
-}
-
 .info {
     display: flex;
     justify-content: space-between;
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
     width: 100%;
     padding-top: 1em;
     padding-bottom: var(--default_margin_or_padding);
     border-top: solid;
     border-width: 2px;
     border-color: var(--button-and-border);
-    font-family: 'Montserrat', sans-serif;
-    font-size: var(--title-size);
-}
-
-.info_title {
-    color: var(--title-text);
-    font-weight: 700;
-}
-
-.info_subtitle {
-    font-weight: 400;
 }
 
 .info_a {
@@ -243,17 +216,8 @@ main {
 
 
 /*_________________________О себе_________________________*/
-.intro {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    font-family: 'Montserrat', sans-serif;
+.about_me {
     font-size: var(--title-size);
-    padding-top: var(--default_margin_or_padding);
-    padding-bottom: var(--default_margin_or_padding);
-}
-
-.intro_text {
     font-weight: 400;
     line-height: 1.5em;
 }
@@ -261,12 +225,7 @@ main {
 
 
 /*_________________________Увлечения_________________________*/
-.expertise {
-    padding-top: var(--default_margin_or_padding);
-    padding-bottom: var(--default_margin_or_padding);
-}
-
-.expertise_inner {
+.hobbies {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -280,29 +239,10 @@ main {
 
 .number {
     color: var(--prime-text);
-    font-family: 'Montserrat', sans-serif;
-    font-size: var(--number-size);
-    font-weight: 700;
     margin-right: 1em;
-    user-select:none;
+    user-select: none;
 }
 
-.expertise_title {
-    color: var(--title-text);
-    font-family: 'Montserrat', sans-serif;
-    font-size: var(--title-size);
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-.expertise_subtitle {
-    margin-top: -0.5em;
-    color: var(--subtitle-text);
-    font-family: 'Montserrat', sans-serif;
-    font-size: var(--subtitle-size);
-    font-weight: 400;
-    line-height: 1.5;
-}
 
 
 /*_________________________Навыки_________________________*/
@@ -311,21 +251,11 @@ main {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 3em 3em;
-    padding-top: var(--default_margin_or_padding);
-    padding-bottom: var(--default_margin_or_padding);
     height: 100%;
 }
 
 .progressbar {
     padding-right: 3em;
-}
-
-.progressbar_title {
-    color: var(--title-text);
-    font-family: 'Montserrat', sans-serif;
-    font-size: var(--title-size);
-    font-weight: 700;
-    text-transform: uppercase;
 }
 
 progress {
@@ -338,7 +268,6 @@ progress {
 progress::-webkit-progress-bar {
     background-color: var(--button-and-border);
 }
-
 progress::-webkit-progress-value {
     background-color: var(--prime-text);
 }
@@ -346,7 +275,7 @@ progress::-webkit-progress-value {
 
 
 /*_________________________Опыт_________________________*/
-.timeline_first {
+.timeline {
     display: grid;
     grid-template-rows: 1fr 1fr;
     gap: 3em 3em;
@@ -357,16 +286,11 @@ progress::-webkit-progress-value {
     border-color: var(--button-and-border);
 }
 
-.timeline_second {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    gap: 3em 3em;
+.timeline_addition {
+    margin-top: 0px;
     padding-top: var(--default_margin_or_padding);
     padding-bottom: calc(var(--default_margin_or_padding) / 2);
     margin-bottom: calc(var(--default_margin_or_padding) / 2);
-    border-left: solid;
-    border-width: 2px;
-    border-color: var(--button-and-border);
 }
 
 .dot {
@@ -377,7 +301,7 @@ progress::-webkit-progress-value {
     position: relative;
 }
 
-.timeline_point_first {
+.timeline_point {
     display: flex;
     align-items: center;
     position: absolute;
@@ -386,6 +310,10 @@ progress::-webkit-progress-value {
     width: 25px;
     height: 25px;
     background-color: var(--main-bg);
+}
+
+.timeline_point_addition {
+    background-color: var(--first-bg);
 }
 
 .timeline_point_dot {
@@ -405,37 +333,19 @@ progress::-webkit-progress-value {
 
 .dot_date {
     color: var(--signatures);
-    font-family: 'Montserrat', sans-serif;
     font-size: 10px;
     font-weight: 400;
 }
 
-.dot_name_title {
+.dot_name_post {
     color: var(--title-text);
-    font-family: 'Montserrat', sans-serif;
-    font-size: var(--title-size);
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-.dot_name_subtitle {
-    color: var(--title-text);
-    font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     font-weight: 400;
 }
 
 .dot_place {
     color: var(--signatures);
-    font-family: 'Montserrat', sans-serif;
     font-size: 10px;
-    font-weight: 400;
-}
-
-.dot_text {
-    color: var(--subtitle-text);
-    font-family: 'Montserrat', sans-serif;
-    font-size: var(--subtitle-size);
     font-weight: 400;
 }
 
@@ -452,28 +362,12 @@ progress::-webkit-progress-value {
 
 
 
-/*_________________________Образование_________________________*/
-.timeline_point_second {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    top: -3px;
-    left: -13.5px;
-    width: 25px;
-    height: 25px;
-    background-color: var(--first-bg);
-}
-
-
-
 /*_________________________Достижения_________________________*/
 .awards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 3em 3em;
-    padding-top: var(--default_margin_or_padding);
-    padding-bottom: var(--default_margin_or_padding);
 }
 
 .award_line {
@@ -484,18 +378,9 @@ progress::-webkit-progress-value {
     width: 30%;
 }
 
-.award_title {
-    color: var(--title-text);
-    font-family: 'Montserrat', sans-serif;
-    font-size: var(--title-size);
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
 .award_subtitle {
     margin-top: 0.5em;
     color: var(--subtitle-text);
-    font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     font-weight: 400;
     line-height: 1.75;
@@ -514,8 +399,6 @@ progress::-webkit-progress-value {
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
     gap: 2em 2em;
-    padding-top: var(--default_margin_or_padding);
-    padding-bottom: var(--default_margin_or_padding);
 }
 
 .photo {
@@ -534,23 +417,6 @@ progress::-webkit-progress-value {
     opacity: 0;
     transition: 0.75s ease-in-out;
     user-select:none;
-}
-
-.caption_title {
-    color: var(--photo-caption);
-    font-family: 'Montserrat', sans-serif;
-    font-size: var(--title-size);
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-.caption_subtitle {
-    margin-top: -0.5em;
-    color: var(--photo-caption);
-    font-family: 'Montserrat', sans-serif;
-    font-size: var(--subtitle-size);
-    font-weight: 400;
-    line-height: 1.75;
 }
 
 .photo_line {
@@ -588,27 +454,11 @@ progress::-webkit-progress-value {
 
 
 /*_________________________Контакты_________________________*/
-.footer {
-    height: 50vh;
-    padding-bottom: var(--default_margin_or_padding);
-}
-
-.footer_info {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: var(--default_margin_or_padding);
-    margin-bottom: var(--default_margin_or_padding);
-    padding-bottom: var(--default_margin_or_padding);
+.info_addition {
+    position: unset;
+    padding-top: 0px;
+    border-top: unset;
     border-bottom: solid;
     border-width: 2px;
     border-color: var(--button-and-border);
-    font-family: 'Montserrat', sans-serif;
-    font-size: var(--title-size);
-}
-
-.footer_content {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
 }
